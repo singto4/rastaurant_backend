@@ -10,26 +10,29 @@ import javax.persistence.Table;
 @Entity
 @Table(name="REST_USER")
 public class UserDto {
+	
 	@Id
-	@GeneratedValue(
-			strategy=GenerationType.IDENTITY)
-	@Column(name="ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
 	private Long id;
-	@Column(name="USERNAME", unique=true, length=255)
-	private String userName;
-	@Column(name="PASSWORD", length=255)
+	
+	@Column(name="username", unique=true, length=255)
+	private String username;
+	
+	@Column(name="password", length=255)
 	private String password;
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;

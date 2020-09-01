@@ -26,59 +26,59 @@ class RestaurantProjectApplicationTests {
 	@Autowired
 	private OrderController orderController;
 	
-	@Test
-	public void TestGetMenuList() {
-		HashMap<String, List<MenuDto>> data = menucontroller.getListMenu();
-		int result = data.get("menu").size();
-		assertEquals(8, result);
-	}
+//	@Test
+//	public void TestGetMenuList() {
+//		HashMap<String, List<MenuDto>> data = menucontroller.getListMenu();
+//		int result = data.get("menu").size();
+//		assertEquals(8, result);
+//	}
 	
-	@Test
-	public void TestGetMenuListFalse() {
-		HashMap<String, List<MenuDto>> data = menucontroller.getListMenu();
-		int result = data.get("menu").size();
-		assertNotEquals(9, result);
-	}
+//	@Test
+//	public void TestGetMenuListFalse() {
+//		HashMap<String, List<MenuDto>> data = menucontroller.getListMenu();
+//		int result = data.get("menu").size();
+//		assertNotEquals(9, result);
+//	}
+//	
+//	@Test
+//	public void TestGetMenuById() throws Exception {
+//		int id = 1;
+//		MenuDto data = menucontroller.getMenubyId(id);
+//		int result = data.getId();
+//		assertEquals(id, result);
+//	}
+//	
+//	@Test
+//	public void TestGetMenuByIdFalse() throws Exception {
+//		int id = 1;
+//		MenuDto data = menucontroller.getMenubyId(id);
+//		int result = data.getId();
+//		assertNotEquals(id+1, result);
+//	}
 	
-	@Test
-	public void TestGetMenuById() throws Exception {
-		int id = 1;
-		MenuDto data = menucontroller.getMenubyId(id);
-		int result = data.getId();
-		assertEquals(id, result);
-	}
+//	@Test
+//	public void TestGetMenuByName() throws Exception {
+//		String name = "Hawaiian Pizza";
+//		MenuDto data = menucontroller.getMenubyName(name);
+//		String result = data.getName();
+//		assertEquals(name, result);
+//	}
 	
-	@Test
-	public void TestGetMenuByIdFalse() throws Exception {
-		int id = 1;
-		MenuDto data = menucontroller.getMenubyId(id);
-		int result = data.getId();
-		assertNotEquals(id+1, result);
-	}
+//	@Test
+//	public void TestGetMenuByNameFalse() throws Exception {
+//		String name = "Hawaiian Pizza";
+//		MenuDto data = menucontroller.getMenubyName(name);
+//		String result = data.getName();
+//		assertNotEquals("Beer", result);
+//	}
 	
-	@Test
-	public void TestGetMenuByName() throws Exception {
-		String name = "Hawaiian Pizza";
-		MenuDto data = menucontroller.getMenubyName(name);
-		String result = data.getName();
-		assertEquals(name, result);
-	}
-	
-	@Test
-	public void TestGetMenuByNameFalse() throws Exception {
-		String name = "Hawaiian Pizza";
-		MenuDto data = menucontroller.getMenubyName(name);
-		String result = data.getName();
-		assertNotEquals("Beer", result);
-	}
-	
-	@Test
-	public void TestGetMenuByKeyword() throws Exception {
-		String keyword = "Pizza"; // 2 record in db
-		HashMap<String, List<MenuDto>> data = menucontroller.getListMenubyKeyword(keyword);
-		int result = data.get("menu").size();
-		assertEquals(2, result);
-	}
+//	@Test
+//	public void TestGetMenuByKeyword() throws Exception {
+//		String keyword = "Pizza"; // 2 record in db
+//		HashMap<String, List<MenuDto>> data = menucontroller.getListMenubyKeyword(keyword);
+//		int result = data.get("menu").size();
+//		assertEquals(2, result);
+//	}
 	
 //	@Test
 //	public void TestGetMenuByKeywordFalse() throws Exception {
